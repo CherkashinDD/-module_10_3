@@ -10,7 +10,7 @@ class Bank:
         self.lock = threading.Lock()
 
     def deposit(self):
-        for i in range(100):
+        for _ in range(100):
             random = randint(50, 500)
             self.balance += random
             print(f"Пополнение: {random}. Баланс: {self.balance}", "\n")
@@ -19,7 +19,7 @@ class Bank:
             sleep(0.001)
 
     def take(self):
-        for i in range(100):
+        for _ in range(100):
             random = randint(50, 500)
             print(f"Запрос на {random}", "\n")
             if random <= self.balance:
